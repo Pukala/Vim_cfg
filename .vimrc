@@ -1,10 +1,9 @@
 set autochdir
 set tags=tags;
 "let g:ycm_global_ycm_extra_conf = '/var/fpwork/pukala/gnb2/gnb/uplane/L2-PS/.ycm_extra_conf.py'
-#set tags+=/
+"set tags+=/
+set tags+=/var/fpwork/pukala/gnb/uplane/tags
 "set tags+=/var/fpwork/pukala/gnb2/gnb/uplane/L2-PS/tags
-
-
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -29,6 +28,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'gnattishness/cscope_maps'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'Yggdroot/indentLine'
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 
@@ -81,9 +81,15 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_working_path_mode = 'c'
 
+
+let g:indentLine_setColors = 1
+let g:indentLine_char = '¦'
+let g:indentLine_leadingSpaceChar = '.'
+
 "set tags+=/var/fpwork/pukala/gnb/uplane/tags
 set tags+=/var/fpwork/pukala/gnb/uplane/tags
 set tags+=/var/fpwork/pukala/gnb2/gnb/uplane/tags
+
 
 nmap <F8> :TagbarToggle<CR>
 map /  <Plug>(incsearch-forward)
@@ -121,6 +127,14 @@ let g:ycm_filetype_blacklist = {
 
 let g:ycm_key_invoke_completion = '<C-Space>'
 
+set background=dark
+
+" Maintainer:	Henrique C. Alves (hcarvalhoalves@gmail.com)
+" Version:      1.0
+" Last Change:	September 25 2008
 
 set background=dark
+
+
+
 
